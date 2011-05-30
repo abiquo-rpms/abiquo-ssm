@@ -2,7 +2,7 @@
 
 Name:     abiquo-ssm
 Version:  1.8
-Release:  0%{?dist}%{?buildstamp}
+Release:  1%{?dist}%{?buildstamp}
 Summary:  Abiquo System Storage Manager
 Group:    Development/System 
 License:  Multiple 
@@ -34,6 +34,9 @@ rm -rf $RPM_BUILD_ROOT
 %{abiquo_basedir}/tomcat/webapps/ssm
 
 %changelog
+* Mon May 30 2011 Sergio Rubio <srubio@abiquo.com> - 1.8-1
+- updated to 1.8
+
 * Thu Apr 14 2011 Sergio Rubio <srubio@abiquo.com> - 1.7.6-1
 - bumped version
 
