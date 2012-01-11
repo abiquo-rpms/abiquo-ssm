@@ -1,13 +1,13 @@
 %define abiquo_basedir /opt/abiquo
 
 Name:     abiquo-ssm
-Version:  1.8.5
-Release:  1%{?dist}%{?buildstamp}
+Version:  2.0
+Release:  2%{?dist}%{?buildstamp}
 Summary:  Abiquo System Storage Manager
 Group:    Development/System 
 License:  Multiple 
 URL:      http://www.abiquo.com 
-Source0:  ssm.war
+Source0:  %{?abiquo_binaries_url}ssm.war
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires: abiquo-core
 BuildArch: noarch
@@ -34,6 +34,9 @@ rm -rf $RPM_BUILD_ROOT
 %{abiquo_basedir}/tomcat/webapps/ssm
 
 %changelog
+* Mon Dec 19 2011 Sergio Rubio <srubio@abiquo.com> - 2.0-2
+- bumped version to 2.0
+
 * Fri Sep 30 2011 Sergio Rubio <srubio@abiquo.com> - 1.8.5-1
 - bumped version to 1.8.5
 
